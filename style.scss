@@ -48,7 +48,16 @@ body{
         border-radius: 1rem;
         
         //content-box tells it just to cover the content area
+        background: linear-gradient(rgb(28,28,28)) padding-box,
+        conic-gradient(from var(--rotate),rgb(28,28,28),rgb(28,28,28), rgb(233, 134, 21),rgb(28,28,28), rgb(28,28,28) ) border-box
+        ;
+        border: 0 solid rgba(236, 236, 236, 0.142);
         
+        animation: rotator 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+        transition: all 0.2s linear;
         
         img{
             width: 100%;
@@ -60,11 +69,7 @@ body{
         color: rgb(243, 149, 41);
         box-shadow: 0 0 6rem rgb(233, 134, 21);
 
-        background: linear-gradient(rgb(28,28,28)) padding-box,
-        conic-gradient(from var(--rotate),rgb(28,28,28), rgb(233, 134, 21), rgb(28,28,28) ) border-box
-        ;
-        border: 0.2rem solid rgba(236, 236, 236, 0.142);
-
-        animation: rotator 1s infinite;
+        animation-play-state: running;
+        border-width: 0.2rem;
     }
 }
