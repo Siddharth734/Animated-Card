@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'tapestry';
+    src: url(Tapestry-Regular.ttf);
+}
+
+html{
+    font-family: 'tapestry';
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+@property --rotate{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotator {
+    from{ --rotate: 0deg; }
+
+    to{ --rotate: 360deg; }
+}
+
+body{
+    background-color: rgb(28, 28, 28);
+    color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    .box{
+        // height: 40rem;
+        max-width: 20rem;
+        padding-inline: 1.2rem;
+        padding-bottom: 1.2rem;
+        corner-shape: scoop;
+        border-radius: 1rem;
+        
+        //content-box tells it just to cover the content area
+        
+        
+        img{
+            width: 100%;
+        }
+    }
+    
+    .box:hover{
+        cursor: pointer;
+        color: rgb(243, 149, 41);
+        box-shadow: 0 0 6rem rgb(233, 134, 21);
+
+        background: linear-gradient(rgb(28,28,28)) padding-box,
+        conic-gradient(from var(--rotate),rgb(28,28,28), rgb(233, 134, 21), rgb(28,28,28) ) border-box
+        ;
+        border: 0.2rem solid rgba(236, 236, 236, 0.142);
+
+        animation: rotator 1s infinite;
+    }
+}
