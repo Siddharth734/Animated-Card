@@ -44,6 +44,8 @@ body .box {
   padding-bottom: 1.2rem;
   corner-shape: scoop;
   border-radius: 1rem;
+  box-shadow: 0 0 0rem rgb(233, 134, 21);
+  text-shadow: 0 0 0rem rgb(233, 134, 21);
   background: linear-gradient(rgb(28, 28, 28)) padding-box, conic-gradient(from var(--rotate), rgb(28, 28, 28), rgb(28, 28, 28), rgb(233, 134, 21), rgb(28, 28, 28), rgb(28, 28, 28)) border-box;
   border: 0 solid rgba(236, 236, 236, 0.142);
   animation: rotator 5s;
@@ -55,14 +57,18 @@ body .box {
 body .box img {
   width: 100%;
 }
+body .box h1 {
+  transform: translateY(0) scale(1);
+  transition: all 0.2s linear;
+}
 body .box:hover {
   cursor: pointer;
   color: rgb(243, 149, 41);
   box-shadow: 0 0 6rem rgb(233, 134, 21);
+  text-shadow: 0 0 0.2rem rgb(233, 134, 21);
   animation-play-state: running;
   border-width: 0.2rem;
 }
 body .box:hover h1 {
   transform: translateY(8rem) scale(2);
-  letter-spacing: 0.18rem;
 }/*# sourceMappingURL=style.css.map */

@@ -46,6 +46,8 @@ body{
         padding-bottom: 1.2rem;
         corner-shape: scoop;
         border-radius: 1rem;
+        box-shadow: 0 0 0rem rgb(233, 134, 21);
+        text-shadow: 0 0 0rem rgb(233, 134, 21);
         
         //content-box tells it just to cover the content area
         background: linear-gradient(rgb(28,28,28)) padding-box,
@@ -62,19 +64,24 @@ body{
         img{
             width: 100%;
         }
+        
+        h1{
+            transform: translateY(0) scale(1);
+            transition: all 0.2s linear;
+        }
     }
     
     .box:hover{
         cursor: pointer;
         color: rgb(243, 149, 41);
         box-shadow: 0 0 6rem rgb(233, 134, 21);
+        text-shadow: 0 0 0.2rem rgb(233, 134, 21);
 
         animation-play-state: running;
         border-width: 0.2rem;
 
         h1{
             transform: translateY(8rem) scale(2);
-            letter-spacing: 0.18rem;
         }
     }
 }
