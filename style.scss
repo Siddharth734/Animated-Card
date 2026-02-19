@@ -71,5 +71,10 @@ body{
 
         animation-play-state: running;
         border-width: 0.2rem;
+
+        h1{
+            transform: translateY(8rem) scale(2);
+            letter-spacing: 0.18rem;
+        }
     }
 }

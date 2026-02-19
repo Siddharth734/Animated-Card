@@ -61,4 +61,8 @@ body .box:hover {
   box-shadow: 0 0 6rem rgb(233, 134, 21);
   animation-play-state: running;
   border-width: 0.2rem;
+}
+body .box:hover h1 {
+  transform: translateY(8rem) scale(2);
+  letter-spacing: 0.18rem;
 }/*# sourceMappingURL=style.css.map */
